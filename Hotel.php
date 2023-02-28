@@ -10,59 +10,65 @@ class Hotel
     private $reservations;
 
 
-    public function __construct($nameHotel, $nom, $adresse, $nbChambres, $nbChambreRes, $nbChambreDispo)
+    public function __construct($nameHotel, $adresse, $Zipcode, $city, $bedroom, Reservation $reservations)
     {
         $this->nameHotel = $nameHotel;
-        $this->nom = $nom;
         $this->adresse = $adresse;
-        $this->nbChambres = $nbChambres;
-        $this->nbChambreRes = $nbChambreRes;
-        $this->nbChambreDispo = $nbChambreDispo;
-
+        $this->Zipcode = $Zipcode;
+        $this->city = $city;
+        $this->reservations = $reservations;
+        $this->bedroom = $bedroom;
     }
 
-    public function getNom()
+    public function getNameHotel()
     {
-        return $this->nom;
+        return $this->nameHotel;
     }
     public function getAdresse()
     {
         return $this->adresse;
     }
-    public function getNbChambres()
+    public function getZiptCode()
     {
-        return $this->nbChambres;
+        return $this->Zipcode;
     }
-    public function getNbChambreRes()
+    public function getCity()
     {
-        return $this->nbChambreRes;
+        return $this->city;
     }
-    public function getNbChambreDispo()
+    public function getReservations()
     {
-        return $this->nbChambreDispo;
+        return $this->reservations;
     }
-    public function setNom($nom)
+    public function getBedRoom()
     {
-        $this->nom = $nom;
+        return $this->bedroom;
+    }
+
+    public function setNameHotel($nameHotel)
+    {
+        $this->nameHotel = $nameHotel;
     }
     public function setAdresse($adresse)
     {
         $this->adresse = $adresse;
     }
-    public function setNbChambres($nbChambres)
+    public function setCity($city)
     {
-        $this->nbChambres = $nbChambres;
+        $this->city = $city;
     }
-    public function setNbChambreRes($nbChambreRes)
+    public function setReservations($reservations)
     {
-        $this->nbChambreRes = $nbChambreRes;
+        $this->reservations = $reservations;
     }
-    public function setNbChambreDispo($nbChambreDispo)
+    public function setBedRoom($bedroom)
     {
-        $this->nbChambreDispo = $nbChambreDispo;
+        $this->bedroom = $bedroom;
     }
 
-    public function __toString(){
-        
+    public function __tostring()
+    {
+        return "ok";
     }
+
 }

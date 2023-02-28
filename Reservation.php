@@ -9,23 +9,22 @@ class Reservation
     private Client $client;
 
 
-    public function __construct($dateDebut, $dateDeFin)
+    public function __construct($hotel, $bedroom, $dateDebut, $dateDeFin, $client)
     {
+        $this->hotel = $hotel;
+        $this->bedroom = $bedroom;
         $this->dateDebut = new DateTime($dateDebut);
         $this->dateDeFin = new DateTime($dateDeFin);
+        $this->client = $client;
     }
 
-    public function getPrenom()
+    public function getHotel()
     {
-        return $this->prenom;
+        return $this->hotel;
     }
-    public function getNom()
+    public function getBedroom()
     {
-        return $this->nom;
-    }
-    public function getChambreRes()
-    {
-        return $this->ChambreRes;
+        return $this->bedroom;
     }
     public function getDateDebut()
     {
@@ -35,17 +34,18 @@ class Reservation
     {
         return $this->dateDeFin;
     }
-    public function setPrenom()
+    public function getClient()
     {
-        return $this->prenom;
+        return $this->client;
     }
-    public function setNom($nom)
+
+    public function setHotel($hotel)
     {
-        $this->nom = $nom;
+        $this->hotel = $hotel;
     }
-    public function setNbChambreRes($ChambreRes)
+    public function setBedroom($bedroom)
     {
-        $this->ChambreRes = $ChambreRes;
+        $this->bedroom = $bedroom;
     }
     public function setDateDebut($dateDebut)
     {
@@ -55,7 +55,13 @@ class Reservation
     {
         $this->dateDeFin = $dateDeFin;
     }
+    public function setClient($client)
+    {
+        $this->client = $client;
+    }
 
-
-
+    public function __tostring()
+    {
+        return "ok";
+    }
 }
