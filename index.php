@@ -1,8 +1,9 @@
 <title>Hotel_POO</title>
 
 <?php
-include "Hotel.php";
-include "Client.php";
+include "Hilton.php";
+include "Regent.php";
+include "Reservation.php";
 
 
 
