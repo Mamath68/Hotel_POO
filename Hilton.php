@@ -3,9 +3,9 @@
 class Hilton
 {
 
-    protected $nom;
-    protected $adresse;
-    protected $nbChambre;
+    private $nom;
+    private $adresse;
+    private $nbChambre;
 
     public function __construct($nom, $adresse, $nbChambre)
     {
