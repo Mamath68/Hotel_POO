@@ -2,17 +2,15 @@
 
 class Reservation
 {
-    private $prenom;
-    private $nom;
-    private $ChambreRes;
+    private Hotel $hotel;
+    private Bedroom $bedroom;
     private DateTime $dateDebut;
     private DateTime $dateDeFin;
+    private Client $client;
 
-    public function __construct($nom, $prenom,$ChambreRes, $dateDebut, $dateDeFin)
+
+    public function __construct($dateDebut, $dateDeFin)
     {
-        $this->prenom = $prenom;
-        $this->nom = $nom;
-        $this->ChambreRes = $ChambreRes;
         $this->dateDebut = new DateTime($dateDebut);
         $this->dateDeFin = new DateTime($dateDeFin);
     }

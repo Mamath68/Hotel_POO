@@ -1,13 +1,13 @@
 <?php
 
-class Hilton
+class Hotel
 {
     private $nameHotel;
-    private $nom;
     private $adresse;
-    private $nbChambres;
-    private $nbChambreRes;
-    private $nbChambreDispo;
+    private $Zipcode;
+    private $city;
+    private $bedroom;
+    private $reservations;
 
 
     public function __construct($nameHotel, $nom, $adresse, $nbChambres, $nbChambreRes, $nbChambreDispo)
@@ -60,5 +60,9 @@ class Hilton
     public function setNbChambreDispo($nbChambreDispo)
     {
         $this->nbChambreDispo = $nbChambreDispo;
+    }
+
+    public function __toString(){
+        
     }
 }
