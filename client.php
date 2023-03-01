@@ -5,15 +5,13 @@ class Client
 
     private $firstname;
     private $name;
-    private Reservation $reservations;
-    private $total_Price;
+    private array $reservations;
 
-    public function __construct($firstname, $name, $reservations, $total_Price)
+    public function __construct($firstname, $name)
     {
         $this->firstname = $firstname;
         $this->name = $name;
-        $this->reservations = $reservations;
-        $this->total_Price = $total_Price;
+        $this->reservations = [ ];
     }
 
     public function getFirstName()
@@ -28,10 +26,6 @@ class Client
     {
         return $this->reservations;
     }
-    public function getTotalPrice()
-    {
-        return $this->total_Price;
-    }
 
     public function setFirstName($firstname)
     {
@@ -44,10 +38,6 @@ class Client
     public function setReservation($reservations)
     {
         $this->reservations = $reservations;
-    }
-    public function setTotalPrice($total_Price)
-    {
-        $this->total_Price = $total_Price;
     }
 
     public function __toString()

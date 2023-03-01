@@ -4,20 +4,18 @@ class Hotel
 {
     private $nameHotel;
     private $adresse;
-    private $Zipcode;
+    private $zipcode;
     private $city;
     private $bedroom;
     private $reservations;
 
 
-    public function __construct($nameHotel, $adresse, $Zipcode, $city, $bedroom, Reservation $reservations)
+    public function __construct($nameHotel, $adresse, $zipcode, $city)
     {
         $this->nameHotel = $nameHotel;
         $this->adresse = $adresse;
-        $this->Zipcode = $Zipcode;
+        $this->zipcode = $zipcode;
         $this->city = $city;
-        $this->reservations = $reservations;
-        $this->bedroom = $bedroom;
     }
 
     public function getNameHotel()
@@ -30,7 +28,7 @@ class Hotel
     }
     public function getZiptCode()
     {
-        return $this->Zipcode;
+        return $this->zipcode;
     }
     public function getCity()
     {
@@ -56,6 +54,10 @@ class Hotel
     public function setCity($city)
     {
         $this->city = $city;
+    }
+    public function setZipcode($zipcode)
+    {
+        $this->zipcode = $zipcode;
     }
     public function setReservations($reservations)
     {

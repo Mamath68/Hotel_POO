@@ -9,15 +9,17 @@ class Bedroom
     private bool $wifi;
     private int $nbBed;
     private array $reservations;
+    private Hotel $hotel;
 
-    public function __construct($room_Number, $status, $price, $wifi, $nbBed, $reservations)
+    public function __construct($room_Number,$price, $wifi, $nbBed, $hotel)
     {
         $this->room_Number = $room_Number;
-        $this->status = $status;
+        $this->status = false;
         $this->price = $price;
         $this->wifi = $wifi;
         $this->nbBed = $nbBed;
-        $this->reservations = $reservations;
+        $this->reservations = [];
+        $this->hotel = $hotel;
     }
 
     public function getRoomNumber()
