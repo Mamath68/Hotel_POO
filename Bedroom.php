@@ -11,7 +11,7 @@ class Bedroom
     private array $reservations;
     private Hotel $hotel;
 
-    public function __construct($room_Number,$price, $wifi, $nbBed, $hotel)
+    public function __construct($room_Number, $price, $wifi, $nbBed, $hotel)
     {
         $this->room_Number = $room_Number;
         $this->status = false;
@@ -20,6 +20,7 @@ class Bedroom
         $this->nbBed = $nbBed;
         $this->reservations = [];
         $this->hotel = $hotel;
+        $hotel->addRoom($this);
     }
 
     public function getRoomNumber()
@@ -72,4 +73,14 @@ class Bedroom
         $this->reservations = $reservations;
     }
 
+    public function addRoom($reservations)
+    {
+        $this->reservations[] = $reservations;
+    }
+
+
+    public function __toString()
+    {
+        return "ok";
+    }
 }

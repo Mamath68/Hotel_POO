@@ -12,10 +12,14 @@ class Reservation
     public function __construct($hotel, $bedroom, $dateDebut, $dateDeFin, $client)
     {
         $this->hotel = $hotel;
+        $hotel->addReservation($this);
         $this->bedroom = $bedroom;
+        $bedroom->addReservation($this);
+        $bedroom->setStatus(true);
         $this->dateDebut = new DateTime($dateDebut);
         $this->dateDeFin = new DateTime($dateDeFin);
         $this->client = $client;
+        $client->addReservation($this);
     }
 
     public function getHotel()
@@ -59,6 +63,11 @@ class Reservation
     {
         $this->client = $client;
     }
+    public function addReservation($hotel)
+    {
+        $this->hotel = $hotel;
+    }
+    
 
     public function __tostring()
     {

@@ -68,6 +68,17 @@ class Hotel
         $this->bedroom = $bedroom;
     }
 
+    public function chambresReservees(){
+        $nbChambresReservees = 0;
+        foreach ($this->bedroom as $room) {
+            if ($room->getStatus()==true){
+                $nbChambresReservees++;
+            }
+        }
+        return $nbChambresReservees;
+    }
+
+
     public function __tostring()
     {
         return "ok";
