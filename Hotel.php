@@ -3,21 +3,26 @@
 class Hotel
 {
     private $nameHotel;
+    // $nameHotel(Nom de l'hotel)
 
     private $adresse;
+    // $adresse(Adresse de l'hotel)
 
     private $zipcode;
+    // $zipcode(Code Postal)
 
     private $city;
+    // $city(Ville)
 
     private $bedroom;
+    // $bedroom(Chambre)
 
     private array $reservations;
 
     public function __construct($nameHotel, $adresse, $zipcode, $city)
     {
         $this->nameHotel = $nameHotel;
-        //   nameHotel(Nom de l'hotel) prendra la valeur de $nbHotel
+        //   nameHotel(Nom de l'hotel) prendra la valeur de $nameHotel
 
         $this->adresse = $adresse;
         //   adresse(Adresse de l'hotel) prendra la valeurs de $adresse
@@ -88,6 +93,7 @@ class Hotel
         $this->reservations[] = $reservation;
     }
     // addReservation = ajouter une nouvelle reservation.
+    // a l'appel de la fonction, cela rajoutera un objet reservation a mon tableau de reservation de l'hôtel. = Array push.
 
     public function afficherReservation()
     {
@@ -96,7 +102,7 @@ class Hotel
             echo $reservation . "<br>";
         }
     }
-// en appelant la fonction, cela affichera : Reservation de l'hotel : Hilton **** Strasbourg + le nombre de reservation. 
+    // en appelant la fonction, cela affichera : Reservation de l'hotel : Hilton **** Strasbourg + le nombre de reservation. 
 
     public function chambresReservees()
     {
@@ -108,7 +114,7 @@ class Hotel
         }
         return $nbChambresReservees;
     }
-// Calcul complexe et pas tant que ça en même temps pour claculer le nombre de chambres reserver dans l'hotel.
+    // Calcul complexe et pas tant que ça en même temps pour claculer le nombre de chambres reserver dans l'hotel.
 
     public function __tostring()
     {

@@ -3,7 +3,6 @@
 class Reservation
 {
     private Hotel $hotel;
-    // unz reservation sera liée à un seul objet hotel
     // clé étrangère de Hotel
     private Bedroom $bedroom;
     // clé étrangère de bedroom(chambre)
