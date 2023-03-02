@@ -3,15 +3,22 @@
 class Client
 {
 
-    private $firstname;
-    private $name;
+    private string $firstname;
+    // string(chaine de caractère); $firstname = $prénom
+    private string $name;
+    // string(chaine de caractère); $name = $nom
     private array $reservations;
+    // array(tableau); 1 client peut avoir plusieurs réservation, mais une reservation n'as qu'un seul client.
+
 
     public function __construct($firstname, $name)
     {
         $this->firstname = $firstname;
+        //   firstname(prénom) prendra la valeur de $firstname
         $this->name = $name;
-        $this->reservations = [ ];
+        //   name(Nom) prendra la valeur de $name
+        $this->reservations = [];
+        // a la construction de mon objet client, il dispose d'un tableau de resevation vide.
     }
 
     public function getFirstName()
@@ -40,6 +47,11 @@ class Client
         $this->reservations = $reservations;
     }
 
+    public function addReservation($reservation)
+    {
+        $this->reservations[] = $reservation;
+    }
+    // addReservation = ajouter une nouvelle reservation.
     public function __toString()
     {
         return "ok";
