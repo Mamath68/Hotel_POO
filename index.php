@@ -23,11 +23,11 @@
     $h1 = new Hotel("Hilton", "10 route de la Gare", 67000, "Strasbourg");
     $h2 = new Hotel("Regent", "61 rue Dauphine", 75006, "Paris");
 
-
+    
     $b1 = new Bedroom(1, 300, false, 2, $h1);
     $b2 = new Bedroom(2, 120, false, 2, $h1);
-    $b3 = new Bedroom(3, 120, true, 2, $h1);
-    $b4 = new Bedroom(4, 300, true, 2, $h1);
+    $b3 = new Bedroom(3, 120, false, 2, $h1);
+    $b4 = new Bedroom(4, 120, false, 2, $h1);
     $b5 = new Bedroom(5, 120, false, 2, $h1);
     $b6 = new Bedroom(6, 120, false, 2, $h1);
     $b7 = new Bedroom(7, 300, false, 2, $h1);
