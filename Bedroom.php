@@ -57,7 +57,12 @@ class Bedroom
 
     public function getWifi()
     {
-        return $this->wifi;
+        if ($this->wifi == true) {
+            $wifi = "Oui";
+        } else {
+            $wifi = "Non";
+        }
+        return $wifi;
     }
 
     public function getNbBed()
@@ -107,11 +112,19 @@ class Bedroom
     }
     // addReservation = ajouter une nouvelle reservation.
 
+    public function calculerPrixTTC()
+    {
+        $prixTTC = $this->getReservation() * $this->getPrice();
+
+        echo $prixTTC;
+    }
+
     public function getInfos()
     {
         echo "<p>" . $this->getRoomNumber() . " " . $this->getPrice() . " " . $this->getWifi() . " " . $this->getNbBed() . "<p>";
-
+        echo $this->calculerPrixTTC()." € ";
     }
+
     public function __toString()
     {
         return $this->getRoomNumber() . " " . $this->getPrice() . " " . $this->getWifi() . " " . $this->getNbBed();
