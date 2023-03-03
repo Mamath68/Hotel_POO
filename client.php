@@ -51,19 +51,20 @@ class Client
     {
         $this->reservations[] = $reservation;
     }
-
-
+    // addReservation = ajouter une nouvelle reservation.
     public function getInfos()
     {
         if (count($this->reservations) > 0) {
-            echo "<p class='color'>" . count($this->reservations) . mb_strtoupper(' Réservations ');
-
+            echo "<p class='color'>" . count($this->reservations) . mb_strtoupper(' Réservations ') . "</p>";
         }
-    }
-
-    // addReservation = ajouter une nouvelle reservation.
-    public function __toString()
-    {
-        return $this->getFirstName() . " " . $this->getName();
+        foreach ($this->reservations as $reservation) {
+            echo "Hotel : " .
+            $reservation->getHotel()->getNameHotel() . " **** " . $reservation->getHotel()->getCity() . " / Chambre : " .
+                $reservation->getBedRoom()->getRoomNumber() . " ( " .
+                $reservation->getBedRoom()->getNbBed() . " lits - " .
+                $reservation->getBedRoom()->getPrice() . " € -  Wifi : " . $reservation->getBedRoom()->getWifi() . " ) du ".date_format($reservation->getDateDebut(),'d-m-Y')." au ".date_format($reservation->getDateDeFin(),'d-m-Y')."<br>"
+                
+            ;
+        }
     }
 }
