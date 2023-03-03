@@ -23,7 +23,7 @@
     $h1 = new Hotel("Hilton", "10 route de la Gare", 67000, "Strasbourg");
     $h2 = new Hotel("Regent", "61 rue Dauphine", 75006, "Paris");
 
-    
+
     $b1 = new Bedroom(1, 300, false, 2, $h1);
     $b2 = new Bedroom(2, 120, false, 2, $h1);
     $b3 = new Bedroom(3, 120, false, 2, $h1);
@@ -101,45 +101,79 @@
     <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
         <h3 class="uk-card-title">Reservation de l'hotel Hilton **** Strasbourg</h3>
         <p>
-            <?php echo $h1->getInfos(). $h2->getInfos(); ?>
+            <?php echo $h1->getInfos() . $h2->getInfos(); ?>
         </p>
     </div>
     <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
         <h3 class="uk-card-title">Reservation de Micka MURMANN</h3>
         <p>
-            <?php echo $c2->getInfos()?>
+            <?php echo $c2->getInfos() ?>
         </p>
-    </div>
 
-    <!-- <table class="uk-table">
-        <caption>Table Caption</caption>
-        <thead>
-            <tr>
-                <th>Table Heading</th>
-                <th>Table Heading</th>
-                <th>Table Heading</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Table Data</td>
-                <td>Table Data</td>
-                <td>Table Data</td>
-            </tr>
-            <tr>
-                <td>Table Data</td>
-                <td>Table Data</td>
-                <td>Table Data</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td>Table Footer</td>
-                <td>Table Footer</td>
-                <td>Table Footer</td>
-            </tr>
-        </tfoot>
-    </table> -->
+        <table class="uk-table">
+            <h3>Statuts des chambres de Hilton **** Strasbourg</h3>
+            <caption>Table Caption</caption>
+            <thead>
+                <tr>
+                    <th>Chambres</th>
+                    <th>Prix</th>
+                    <th>Wifi</th>
+                    <th>Etat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><?php $b1->getRoomNumber() ?></td>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                    
+                </tr>
+                <tr>
+                    <td><?php $b2->getRoomNumber() ?></td>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                </tr>
+                <tr>
+                    <td><?php $b3->getRoomNumber() ?></td>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                </tr>
+                <tr>
+                    <td><?php $b4->getRoomNumber() ?></td>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                </tr>
+                <tr>
+                    <td><?php $b16->getRoomNumber() ?></td>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                </tr>
+                <tr>
+                    <td><?php $b17->getRoomNumber() ?></td>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                </tr>
+                <tr>
+                    <td><?php $b18->getRoomNumber() ?></td>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                </tr>
+                <tr>
+                    <td><?php $b19->getRoomNumber() ?></td>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 </body>
 
