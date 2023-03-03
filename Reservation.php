@@ -1,4 +1,5 @@
 <?php
+use Vtiful\Kernel\Format;
 
 class Reservation
 {
@@ -23,15 +24,15 @@ class Reservation
 
         $this->bedroom = $bedroom;
         //  bedroom prend la valeur de $bedroom
-        
+
         $bedroom->addReservation($this);
         //   en appeelant addReservation, $this prendra la valeur de $bedroom
-        
+
         $bedroom->setStatus(true);
         // $bedroom prend la valeur de setStatus, a savoir "true"
         $this->dateDebut = new DateTime($dateDebut);
         //  dateDebut prend la valeur du DateTime($dateDebut)
-        
+
         $this->dateDeFin = new DateTime($dateDeFin);
         //  dateDeFin prend la valeur du DateTime($dateDeFin)
 
@@ -85,9 +86,9 @@ class Reservation
         $this->client = $client;
     }
 
-    public function __tostring()
+    public function __toString()
     {
-        return "ok";
+        return "<p>" . $this->client->getFirstName() . " " . $this->client->getName() . " - Chambre " . $this->bedroom->getRoomNumber() . ", du " . date_format($this->getDateDebut(), 'd-m-Y') . " au " . date_format($this->getDateDeFin(), 'd-m-Y') . "</p>";
     }
 }
 

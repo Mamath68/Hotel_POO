@@ -14,7 +14,7 @@ class Hotel
     private $city;
     // $city(Ville)
 
-    private $bedroom;
+    private array $bedrooms;
     // $bedroom(Chambre)
 
     private array $reservations;
@@ -33,6 +33,8 @@ class Hotel
         $this->city = $city;
         //   city(Ville) prendra la valeur de $city
 
+        $this->bedrooms = [];
+
         $this->reservations = [];
         // a la construction de mon objet Hotel, il dispose d'un tableau de resevation vide.
 
@@ -46,7 +48,7 @@ class Hotel
     {
         return $this->adresse;
     }
-    public function getZiptCode()
+    public function getZipCode()
     {
         return $this->zipcode;
     }
@@ -60,7 +62,7 @@ class Hotel
     }
     public function getBedRoom()
     {
-        return $this->bedroom;
+        return $this->bedrooms;
     }
 
     public function setNameHotel($nameHotel)
@@ -83,9 +85,9 @@ class Hotel
     {
         $this->reservations = $reservations;
     }
-    public function setBedRoom($bedroom)
+    public function addBedRoom($bedroom)
     {
-        $this->bedroom = $bedroom;
+        $this->bedrooms[] = $bedroom;
     }
 
     public function addReservation($reservation)
@@ -94,31 +96,44 @@ class Hotel
     }
     // addReservation = ajouter une nouvelle reservation.
     // a l'appel de la fonction, cela rajoutera un objet reservation a mon tableau de reservation de l'hôtel. = Array push.
-
-    public function afficherReservation()
-    {
-        echo "<h2>Reservation de :" . $this->getNameHotel() . " **** " . $this->getCity() . "</h2>";
-        foreach ($this->reservations as $reservation) {
-            echo $reservation . "<br>";
-        }
-    }
-    // en appelant la fonction, cela affichera : Reservation de l'hotel : Hilton **** Strasbourg + le nombre de reservation. 
-
     public function chambresReservees()
     {
         $nbChambresReservees = 0;
-        foreach ($this->bedroom as $room) {
+        foreach ($this->bedrooms as $room) {
             if ($room->getStatus() == true) {
                 $nbChambresReservees++;
             }
         }
         return $nbChambresReservees;
     }
-    // Calcul complexe et pas tant que ça en même temps pour claculer le nombre de chambres reserver dans l'hotel.
+
+    public function afficherReservations()
+    {
+        echo "<p>" . $this->getAdresse() . " " . $this->getZipCode() . " " . strtoupper($this->getCity()) . "</p>";
+        echo "<p>Nombre de Chambres : " . count($this->bedrooms) . "</p>";
+        echo "<p>Nombre de Chambres réservées : " . $this->chambresReservees() . "</p>";
+        echo "<p>Nombre de chambres Dispo : " . count($this->bedrooms) - $this->ChambresReservees() . "</p>";
+    }
+
+    // en appelant la fonction, cela affichera : Reservation de l'hotel : Hilton **** Strasbourg + le nombre de reservation. 
+
+    public function getInfos()
+    {
+        if (count($this->reservations) > 0) {
+            echo "<p class='color'>" .count($this->reservations) . mb_strtoupper(' Réservations ');
+            foreach ($this->reservations as $reservation) {
+                echo $reservation . " </p>";
+            }
+        } else {
+            echo "<h3>Réservation de l'hôtel " . $this->getNameHotel() . " **** " . $this->getCity() . "</h3>
+            <p>Aucune Réservation !</p>";
+        }
+    }
 
     public function __tostring()
     {
-        return "ok";
+        return "<h2>" . $this->getNameHotel() . " **** " . $this->getCity() . "</h2>"
+            . "<p>" . $this->getAdresse() . " " . $this->getZipCode() . " " . $this->getCity() . "</p>";
     }
 
 }

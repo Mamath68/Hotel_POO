@@ -35,7 +35,7 @@ class Bedroom
         // a la construction de mon objet Bedroom, il dispose d'un tableau de resevation vide.
         $this->hotel = $hotel;
         //   hotel(Hotel) prendra la valeur de $hotel(Clé étrangère de hotel)
-        $hotel->addReservation($this);
+        $hotel->addBedRoom($this);
         //   en appeelant addReservation, $this prendra la valeur de $hotel
     }
 
@@ -107,9 +107,13 @@ class Bedroom
     }
     // addReservation = ajouter une nouvelle reservation.
 
+    public function getInfos()
+    {
+        echo "<p>" . $this->getRoomNumber() . " " . $this->getPrice() . " " . $this->getWifi() . " " . $this->getNbBed() . "<p>";
 
+    }
     public function __toString()
     {
-        return "ok";
+        return $this->getRoomNumber() . " " . $this->getPrice() . " " . $this->getWifi() . " " . $this->getNbBed();
     }
 }

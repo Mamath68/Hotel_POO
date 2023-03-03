@@ -51,9 +51,19 @@ class Client
     {
         $this->reservations[] = $reservation;
     }
+
+
+    public function getInfos()
+    {
+        if (count($this->reservations) > 0) {
+            echo "<p class='color'>" . count($this->reservations) . mb_strtoupper(' Réservations ');
+
+        }
+    }
+
     // addReservation = ajouter une nouvelle reservation.
     public function __toString()
     {
-        return "ok";
+        return $this->getFirstName() . " " . $this->getName();
     }
 }
