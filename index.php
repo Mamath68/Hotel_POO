@@ -24,8 +24,8 @@
     $h2 = new Hotel("Regent", "61 rue Dauphine", 75006, "Paris");
 
 
-    $b1 = new Bedroom(1, 300, false, 2, $h1);
-    $b2 = new Bedroom(2, 120, false, 2, $h1);
+    $b1 = new Bedroom(1, 150, false, 2, $h1);
+    $b2 = new Bedroom(2, 200, false, 2, $h1);
     $b3 = new Bedroom(3, 120, false, 2, $h1);
     $b4 = new Bedroom(4, 120, false, 2, $h1);
     $b5 = new Bedroom(5, 120, false, 2, $h1);
@@ -39,10 +39,10 @@
     $b13 = new Bedroom(13, 300, false, 2, $h1);
     $b14 = new Bedroom(14, 120, false, 2, $h1);
     $b15 = new Bedroom(15, 120, false, 2, $h1);
-    $b16 = new Bedroom(16, 300, false, 2, $h1);
-    $b17 = new Bedroom(17, 120, true, 2, $h1);
-    $b18 = new Bedroom(18, 120, false, 2, $h1);
-    $b19 = new Bedroom(19, 300, false, 2, $h1);
+    $b16 = new Bedroom(16, 350, false, 2, $h1);
+    $b17 = new Bedroom(17, 300, true, 2, $h1);
+    $b18 = new Bedroom(18, 250, false, 2, $h1);
+    $b19 = new Bedroom(19, 150, false, 2, $h1);
     $b20 = new Bedroom(20, 120, false, 2, $h1);
     $b21 = new Bedroom(21, 120, false, 2, $h1);
     $b22 = new Bedroom(22, 300, false, 2, $h1);
@@ -112,7 +112,6 @@
 
         <table class="uk-table">
             <h3>Statuts des chambres de Hilton **** Strasbourg</h3>
-            <caption>Table Caption</caption>
             <thead>
                 <tr>
                     <th>Chambres</th>
@@ -123,53 +122,53 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><?php $b1->getRoomNumber() ?></td>
-                    <td>Table Data</td>
-                    <td>Table Data</td>
-                    <td>Table Data</td>
+                    <td><?php echo $b1->getRoomNumber() ?></td>
+                    <td><?php echo $b1->getPrice() ?></td>
+                    <td><?php echo $b1->getWifi() ?></td>
+                    <td><?php echo $b1->getStatus() ?></td>
                     
                 </tr>
                 <tr>
-                    <td><?php $b2->getRoomNumber() ?></td>
-                    <td>Table Data</td>
-                    <td>Table Data</td>
-                    <td>Table Data</td>
+                    <td><?php echo $b2->getRoomNumber() ?></td>
+                    <td><?php echo $b2->getPrice() ?></td>
+                    <td><?php echo $b2->getWifi() ?></td>
+                    <td><?php echo $b2->getStatus() ?></td>
                 </tr>
                 <tr>
-                    <td><?php $b3->getRoomNumber() ?></td>
-                    <td>Table Data</td>
-                    <td>Table Data</td>
-                    <td>Table Data</td>
+                    <td><?php echo $b3->getRoomNumber() ?></td>
+                    <td><?php echo $b3->getPrice() ?></td>
+                    <td><?php echo $b3->getWifi() ?></td>
+                    <td><?php echo $b3->getStatus() ?></td>
                 </tr>
                 <tr>
-                    <td><?php $b4->getRoomNumber() ?></td>
-                    <td>Table Data</td>
-                    <td>Table Data</td>
-                    <td>Table Data</td>
+                    <td><?php echo $b4->getRoomNumber() ?></td>
+                    <td><?php echo $b4->getPrice() ?></td>
+                    <td><?php echo $b4->getWifi() ?></td>
+                    <td><?php echo $b4->getStatus() ?></td>
                 </tr>
                 <tr>
-                    <td><?php $b16->getRoomNumber() ?></td>
-                    <td>Table Data</td>
-                    <td>Table Data</td>
-                    <td>Table Data</td>
+                    <td><?php echo $b16->getRoomNumber() ?></td>
+                    <td><?php echo $b16->getPrice() ?></td>
+                    <td><?php echo $b16->getWifi() ?></td>
+                    <td><?php echo $b16->getStatus() ?></td>
                 </tr>
                 <tr>
-                    <td><?php $b17->getRoomNumber() ?></td>
-                    <td>Table Data</td>
-                    <td>Table Data</td>
-                    <td>Table Data</td>
+                    <td><?php echo $b17->getRoomNumber() ?></td>
+                    <td><?php echo $b17->getPrice() ?></td>
+                    <td><?php echo $b17->getWifi() ?></td>
+                    <td><?php echo $b17->getStatus() ?></td>
                 </tr>
                 <tr>
-                    <td><?php $b18->getRoomNumber() ?></td>
-                    <td>Table Data</td>
-                    <td>Table Data</td>
-                    <td>Table Data</td>
+                    <td><?php echo $b18->getRoomNumber() ?></td>
+                    <td><?php echo $b18->getPrice() ?></td>
+                    <td><?php echo $b18->getWifi() ?></td>
+                    <td><?php echo $b18->getStatus() ?></td>
                 </tr>
                 <tr>
-                    <td><?php $b19->getRoomNumber() ?></td>
-                    <td>Table Data</td>
-                    <td>Table Data</td>
-                    <td>Table Data</td>
+                    <td><?php echo $b19->getRoomNumber() ?></td>
+                    <td><?php echo $b19->getPrice() ?></td>
+                    <td><?php echo $b19->getWifi() ?></td>
+                    <td><?php echo $b19->getStatus() ?></td>
                 </tr>
             </tbody>
         </table>

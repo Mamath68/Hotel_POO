@@ -19,7 +19,6 @@ class Bedroom
 
     public function __construct($roomNumber, $price, $wifi, $nbBed, $hotel)
     // Affiche dans l'ordre : $roomNumber=Numéro de chambre, $price=Prix de la chambre, $wifi = Disponibilité du Wifi, $nbBed = Nombre de lits dans la chambre, $hotel = Clef étrangère de l'hotel.
-
     {
         $this->roomNumber = $roomNumber;
         //   RoomNumer(Numero de chambre) prendra la valeur de $roomNumber
@@ -47,7 +46,12 @@ class Bedroom
 
     public function getStatus()
     {
-        return $this->status;
+        if ($this->status == false) {
+            $status = "Disponible";
+        } else {
+            $status = "Réservée";
+        }
+        return $status;
     }
 
     public function getPrice()
@@ -112,17 +116,28 @@ class Bedroom
     }
     // addReservation = ajouter une nouvelle reservation.
 
-    public function calculerPrixTTC()
-    {
-        $prixTTC = $this->getReservation() * $this->getPrice();
+    // public function calculerDuree()
+    // {
+    //     // recuper dateDebut et DateDeFin de la reservation.
+    //     // diff entre les deux dates
+    //     // return format en jours (d)
+    //     $bday = $this->hotel->dateDebut();
+    //     $now = $reservation->dateDeFin();
+    //     $diff = $now->diff($bday);
 
-        echo $prixTTC;
-    }
+    //     return $diff->d;
+    // }
+    // public function calculerPrixTTC()
+    // {
+    //     $prixTTC = $diff->d * $this->getPrice();
+
+    //     echo $prixTTC;
+    // }
 
     public function getInfos()
     {
-        echo "<p>" . $this->getRoomNumber() . " " . $this->getPrice() . " " . $this->getWifi() . " " . $this->getNbBed() . "<p>";
-        echo $this->calculerPrixTTC()." € ";
+        echo "<p>" . $this->getRoomNumber() . " " . $this->getPrice() . " " . $this->getWifi() . " " . $this->getNbBed();
+        // echo $this->calculerPrixTTC() . " € <p>";
     }
 
     public function __toString()
