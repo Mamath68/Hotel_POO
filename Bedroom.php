@@ -114,30 +114,11 @@ class Bedroom
     {
         $this->reservations[] = $reservation;
     }
-    // addReservation = ajouter une nouvelle reservation.
-
-    // public function calculerDuree()
-    // {
-    //     // recuper dateDebut et DateDeFin de la reservation.
-    //     // diff entre les deux dates
-    //     // return format en jours (d)
-    //     $bday = $this->hotel->dateDebut();
-    //     $now = $reservation->dateDeFin();
-    //     $diff = $now->diff($bday);
-
-    //     return $diff->d;
-    // }
-    // public function calculerPrixTTC()
-    // {
-    //     $prixTTC = $diff->d * $this->getPrice();
-
-    //     echo $prixTTC;
-    // }
 
     public function getInfos()
     {
         echo "<p>" . $this->getRoomNumber() . " " . $this->getPrice() . " " . $this->getWifi() . " " . $this->getNbBed();
-        // echo $this->calculerPrixTTC() . " € <p>";
+       
     }
 
     public function __toString()
