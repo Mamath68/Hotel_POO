@@ -92,83 +92,150 @@
     $r2 = new Reservation($h1, $b3, " 11-03-2021 ", " 15-03-2021 ", $c2);
     $r3 = new Reservation($h1, $b4, " 01-04-2021 ", " 17-04-2021 ", $c2);
     ?>
-    <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
+
+    <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m  uk-align-center">
         <h3 class="uk-card-title">Hilton **** Strasbourg</h3>
         <p>
             <?php echo $h1->afficherReservations() ?>
         </p>
     </div>
-    <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
+    <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m uk-align-center">
         <h3 class="uk-card-title">Reservation de l'hotel Hilton **** Strasbourg</h3>
         <p>
             <?php echo $h1->getInfos() . $h2->getInfos(); ?>
         </p>
     </div>
-    <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
+    <div class="uk-card uk-card-default uk-card-body uk-width-3-4@m uk-align-center">
         <h3 class="uk-card-title">Reservation de Micka MURMANN</h3>
         <p>
             <?php echo $c2->getInfos() ?>
         </p>
+    </div>
 
-        <table class="uk-table">
+    <div class="uk-card uk-card-default uk-card-body uk-width-auto uk-align-center">
+        <table class="uk-table uk-table-center">
             <h3>Statuts des chambres de Hilton **** Strasbourg</h3>
             <thead>
                 <tr>
-                    <th>Chambres</th>
-                    <th>Prix</th>
-                    <th>Wifi</th>
-                    <th>Etat</th>
+                    <th class="uk-text-center">Chambres</th>
+                    <th class="uk-text-center">Prix</th>
+                    <th class="uk-text-center">Wifi</th>
+                    <th class="uk-text-center">Etat</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><?php echo $b1->getRoomNumber() ?></td>
-                    <td><?php echo $b1->getPrice() ?></td>
-                    <td><?php echo $b1->getWifi() ?></td>
-                    <td><?php echo $b1->getStatus() ?></td>
-                    
+                <tr class="uk-text-center">
+                    <td>
+                        <?php echo $b1->getRoomNumber() ?>
+                    </td>
+                    <td>
+                        <?php echo $b1->getPrice()." €" ?>
+                    </td>
+                    <td>
+                        <?php echo $b1->getWifi() ?>
+                    </td>
+                    <td>
+                        <?php echo $b1->getStatus() ?>
+                    </td>
+
                 </tr>
-                <tr>
-                    <td><?php echo $b2->getRoomNumber() ?></td>
-                    <td><?php echo $b2->getPrice() ?></td>
-                    <td><?php echo $b2->getWifi() ?></td>
-                    <td><?php echo $b2->getStatus() ?></td>
+                <tr class="uk-text-center">
+                    <td>
+                        <?php echo $b2->getRoomNumber() ?>
+                    </td>
+                    <td>
+                        <?php echo $b2->getPrice()." €" ?>
+                    </td>
+                    <td>
+                        <?php echo $b2->getWifi() ?>
+                    </td>
+                    <td>
+                        <?php echo $b2->getStatus() ?>
+                    </td>
                 </tr>
-                <tr>
-                    <td><?php echo $b3->getRoomNumber() ?></td>
-                    <td><?php echo $b3->getPrice() ?></td>
-                    <td><?php echo $b3->getWifi() ?></td>
-                    <td><?php echo $b3->getStatus() ?></td>
+                <tr class="uk-text-center">
+                    <td>
+                        <?php echo $b3->getRoomNumber() ?>
+                    </td>
+                    <td>
+                        <?php echo $b3->getPrice()." €" ?>
+                    </td>
+                    <td>
+                        <?php echo $b3->getWifi() ?>
+                    </td>
+                    <td>
+                        <?php echo $b3->getStatus() ?>
+                    </td>
                 </tr>
-                <tr>
-                    <td><?php echo $b4->getRoomNumber() ?></td>
-                    <td><?php echo $b4->getPrice() ?></td>
-                    <td><?php echo $b4->getWifi() ?></td>
-                    <td><?php echo $b4->getStatus() ?></td>
+                <tr class="uk-text-center">
+                    <td>
+                        <?php echo $b4->getRoomNumber() ?>
+                    </td>
+                    <td>
+                        <?php echo $b4->getPrice()." €" ?>
+                    </td>
+                    <td>
+                        <?php echo $b4->getWifi() ?>
+                    </td>
+                    <td>
+                        <?php echo $b4->getStatus() ?>
+                    </td>
                 </tr>
-                <tr>
-                    <td><?php echo $b16->getRoomNumber() ?></td>
-                    <td><?php echo $b16->getPrice() ?></td>
-                    <td><?php echo $b16->getWifi() ?></td>
-                    <td><?php echo $b16->getStatus() ?></td>
+                <tr class="uk-text-center">
+                    <td>
+                        <?php echo $b16->getRoomNumber() ?>
+                    </td>
+                    <td>
+                        <?php echo $b16->getPrice()." €" ?>
+                    </td>
+                    <td>
+                        <?php echo $b16->getWifi() ?>
+                    </td>
+                    <td>
+                        <?php echo $b16->getStatus() ?>
+                    </td>
                 </tr>
-                <tr>
-                    <td><?php echo $b17->getRoomNumber() ?></td>
-                    <td><?php echo $b17->getPrice() ?></td>
-                    <td><?php echo $b17->getWifi() ?></td>
-                    <td><?php echo $b17->getStatus() ?></td>
+                <tr class="uk-text-center">
+                    <td>
+                        <?php echo $b17->getRoomNumber() ?>
+                    </td>
+                    <td>
+                        <?php echo $b17->getPrice()." €" ?>
+                    </td>
+                    <td>
+                        <?php echo $b17->getWifi() ?>
+                    </td>
+                    <td>
+                        <?php echo $b17->getStatus() ?>
+                    </td>
                 </tr>
-                <tr>
-                    <td><?php echo $b18->getRoomNumber() ?></td>
-                    <td><?php echo $b18->getPrice() ?></td>
-                    <td><?php echo $b18->getWifi() ?></td>
-                    <td><?php echo $b18->getStatus() ?></td>
+                <tr class="uk-text-center">
+                    <td>
+                        <?php echo $b18->getRoomNumber() ?>
+                    </td>
+                    <td>
+                        <?php echo $b18->getPrice()." €" ?>
+                    </td>
+                    <td>
+                        <?php echo $b18->getWifi() ?>
+                    </td>
+                    <td>
+                        <?php echo $b18->getStatus() ?>
+                    </td>
                 </tr>
-                <tr>
-                    <td><?php echo $b19->getRoomNumber() ?></td>
-                    <td><?php echo $b19->getPrice() ?></td>
-                    <td><?php echo $b19->getWifi() ?></td>
-                    <td><?php echo $b19->getStatus() ?></td>
+                <tr class="uk-text-center">
+                    <td>
+                        <?php echo $b19->getRoomNumber() ?>
+                    </td>
+                    <td>
+                        <?php echo $b19->getPrice()." €" ?>
+                    </td>
+                    <td>
+                        <?php echo $b19->getWifi() ?>
+                    </td>
+                    <td>
+                        <?php echo $b19->getStatus() ?>
+                    </td>
                 </tr>
             </tbody>
         </table>
