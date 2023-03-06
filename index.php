@@ -39,10 +39,10 @@
     $b13 = new Bedroom(13, 300, false, 2, $h1);
     $b14 = new Bedroom(14, 120, false, 2, $h1);
     $b15 = new Bedroom(15, 120, false, 2, $h1);
-    $b16 = new Bedroom(16, 350, false, 2, $h1);
+    $b16 = new Bedroom(16, 350, true, 2, $h1);
     $b17 = new Bedroom(17, 300, true, 2, $h1);
-    $b18 = new Bedroom(18, 250, false, 2, $h1);
-    $b19 = new Bedroom(19, 150, false, 2, $h1);
+    $b18 = new Bedroom(18, 250, true, 2, $h1);
+    $b19 = new Bedroom(19, 150, true, 2, $h1);
     $b20 = new Bedroom(20, 120, false, 2, $h1);
     $b21 = new Bedroom(21, 120, false, 2, $h1);
     $b22 = new Bedroom(22, 300, false, 2, $h1);
@@ -129,12 +129,12 @@
                         <?php echo $b1->getRoomNumber() ?>
                     </td>
                     <td>
-                        <?php echo $b1->getPrice()." €" ?>
+                        <?php echo $b1->getPrice() . " €" ?>
                     </td>
                     <td>
                         <?php echo $b1->getWifi() ?>
                     </td>
-                    <td>
+                    <td class="vert">
                         <?php echo $b1->getStatus() ?>
                     </td>
 
@@ -144,12 +144,12 @@
                         <?php echo $b2->getRoomNumber() ?>
                     </td>
                     <td>
-                        <?php echo $b2->getPrice()." €" ?>
+                        <?php echo $b2->getPrice() . " €" ?>
                     </td>
                     <td>
                         <?php echo $b2->getWifi() ?>
                     </td>
-                    <td>
+                    <td class="vert">
                         <?php echo $b2->getStatus() ?>
                     </td>
                 </tr>
@@ -158,12 +158,12 @@
                         <?php echo $b3->getRoomNumber() ?>
                     </td>
                     <td>
-                        <?php echo $b3->getPrice()." €" ?>
+                        <?php echo $b3->getPrice() . " €" ?>
                     </td>
                     <td>
                         <?php echo $b3->getWifi() ?>
                     </td>
-                    <td>
+                    <td class="rouge">
                         <?php echo $b3->getStatus() ?>
                     </td>
                 </tr>
@@ -172,12 +172,12 @@
                         <?php echo $b4->getRoomNumber() ?>
                     </td>
                     <td>
-                        <?php echo $b4->getPrice()." €" ?>
+                        <?php echo $b4->getPrice() . " €" ?>
                     </td>
                     <td>
                         <?php echo $b4->getWifi() ?>
                     </td>
-                    <td>
+                    <td class="rouge">
                         <?php echo $b4->getStatus() ?>
                     </td>
                 </tr>
@@ -186,12 +186,12 @@
                         <?php echo $b16->getRoomNumber() ?>
                     </td>
                     <td>
-                        <?php echo $b16->getPrice()." €" ?>
+                        <?php echo $b16->getPrice() . " €" ?>
                     </td>
                     <td>
                         <?php echo $b16->getWifi() ?>
                     </td>
-                    <td>
+                    <td class="vert">
                         <?php echo $b16->getStatus() ?>
                     </td>
                 </tr>
@@ -200,12 +200,12 @@
                         <?php echo $b17->getRoomNumber() ?>
                     </td>
                     <td>
-                        <?php echo $b17->getPrice()." €" ?>
+                        <?php echo $b17->getPrice() . " €" ?>
                     </td>
                     <td>
                         <?php echo $b17->getWifi() ?>
                     </td>
-                    <td>
+                    <td class="rouge">
                         <?php echo $b17->getStatus() ?>
                     </td>
                 </tr>
@@ -214,12 +214,12 @@
                         <?php echo $b18->getRoomNumber() ?>
                     </td>
                     <td>
-                        <?php echo $b18->getPrice()." €" ?>
+                        <?php echo $b18->getPrice() . " €" ?>
                     </td>
                     <td>
                         <?php echo $b18->getWifi() ?>
                     </td>
-                    <td>
+                    <td class="vert">
                         <?php echo $b18->getStatus() ?>
                     </td>
                 </tr>
@@ -228,12 +228,12 @@
                         <?php echo $b19->getRoomNumber() ?>
                     </td>
                     <td>
-                        <?php echo $b19->getPrice()." €" ?>
+                        <?php echo $b19->getPrice() . " €" ?>
                     </td>
                     <td>
                         <?php echo $b19->getWifi() ?>
                     </td>
-                    <td>
+                    <td class="vert">
                         <?php echo $b19->getStatus() ?>
                     </td>
                 </tr>

@@ -86,6 +86,15 @@ class Reservation
         $this->client = $client;
     }
 
+    public function calcPrix()
+    {
+        $debut = $this->dateDebut;
+        $fin = $this->dateDeFin;
+        $diff = $fin->diff($debut);
+        return $diff->d * $this->bedroom->getPrice();
+        ;
+    }
+
     public function __toString()
     {
         return "<p>" . $this->client->getFirstName() . " " . $this->client->getName() . " - Chambre " . $this->bedroom->getRoomNumber() . ", du " . date_format($this->getDateDebut(), 'd-m-Y') . " au " . date_format($this->getDateDeFin(), 'd-m-Y') . "</p>";

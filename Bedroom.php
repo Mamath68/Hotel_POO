@@ -62,9 +62,9 @@ class Bedroom
     public function getWifi()
     {
         if ($this->wifi == true) {
-            $wifi = "Oui";
+            $wifi = " <img src='img/wifi.png' alt='Wifi'>";
         } else {
-            $wifi = "Non";
+            $wifi = " ";
         }
         return $wifi;
     }

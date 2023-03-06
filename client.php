@@ -52,19 +52,25 @@ class Client
         $this->reservations[] = $reservation;
     }
     // addReservation = ajouter une nouvelle reservation.
+
+
     public function getInfos()
     {
         if (count($this->reservations) > 0) {
-            echo "<p class='color'>" . count($this->reservations) . mb_strtoupper(' Réservations ') . "</p>";
+            echo '<p class="color">' . count($this->reservations) . mb_strtoupper(" Réservations ") . '</p>';
         }
+        $total = 0;
         foreach ($this->reservations as $reservation) {
             echo "Hotel : " .
-            $reservation->getHotel()->getNameHotel() . " **** " . $reservation->getHotel()->getCity() . " / Chambre : " .
+                $reservation->getHotel()->getNameHotel() . " **** " . $reservation->getHotel()->getCity() . " / Chambre : " .
                 $reservation->getBedRoom()->getRoomNumber() . " ( " .
                 $reservation->getBedRoom()->getNbBed() . " lits - " .
-                $reservation->getBedRoom()->getPrice() . " € -  Wifi : " . $reservation->getBedRoom()->getWifi() . " ) du ".date_format($reservation->getDateDebut(),'d-m-Y')." au ".date_format($reservation->getDateDeFin(),'d-m-Y')."<br>"
-                
-            ;
+                $reservation->getBedRoom()->getPrice() . " € -  Wifi : " .
+                $reservation->getBedRoom()->getWifi() . " ) du " .
+                date_format($reservation->getDateDebut(), 'd-m-Y') . " au " .
+                date_format($reservation->getDateDeFin(), 'd-m-Y') . "<br>";
+            $total += $reservation->calcPrix();
         }
+        echo "Total : ".$total. " €";
     }
 }

@@ -10,12 +10,28 @@ h3 {
     text-align: center;
 }
 
-
 .color {
-    background-color: #90ee90;
+    background-color: green;
     width: 20%;
-    color: black;
+    color: whitesmoke;
     text-align: center;
+}
 
+.vert {
+    background-color: green;
+    width: 10%;
+    border-radius: 50%;
+    color: white;
+}
 
+.rouge {
+    background-color: red;
+    width: 10%;
+    border-radius: 50%;
+    color: white;
+}
+
+img {
+    height: 81px;
+    width: 94px;
 }
